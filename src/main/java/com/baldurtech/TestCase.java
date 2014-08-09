@@ -8,18 +8,6 @@ import org.reflections.Reflections;
 
 public class TestCase
 {	
-	public static void getAllClass(String classPackage)
-	{	
-        Reflections reflections = new Reflections(classPackage);
-        Set<Class<? extends TestCase>> allClassCases = reflections.getSubTypesOf(TestCase.class);
-    
-        for(Class clazz:allClassCases)
-        {
-            System.out.println("Classing:" + clazz.getName());
-            runAllMethods(clazz);
-        }
-	}
-	
 	private static List<Method> getAllClassMethods(Class clazz)
 	{
 		List<Method> classMethods = new ArrayList<Method>();
@@ -35,6 +23,7 @@ public class TestCase
 	}
 	public static void runAllMethods(Class clazz)
 	{
+        System.out.println("ClassName: " + clazz.getName());
 		for(Method method: getAllClassMethods(clazz))
 		{
 			System.out.println("	classMethods:" + method.getName());
