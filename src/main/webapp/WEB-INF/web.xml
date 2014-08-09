@@ -17,7 +17,7 @@
   </servlet>
   <servlet-mapping>
       <servlet-name>dispatcherServlet</servlet-name>
-      <url-pattern>/*</url-pattern>
+      <url-pattern>/mustached-octo-sansa/*</url-pattern>
   </servlet-mapping>
 
 </web-app>
