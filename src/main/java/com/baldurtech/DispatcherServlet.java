@@ -12,23 +12,23 @@ public class DispatcherServlet extends HttpServlet
     {
         if(req.getRequestURI().equals("/mustached-octo-sansa/contact/list"))
         {
-            ContactListServlet contactListServlet = new ContactListServlet();
-            contactListServlet.say();
+            TestCase testCase = new TestCase();
+            testCase.runAllMethods(ContactListServlet.class);
         }
         else if(req.getRequestURI().equals("/mustached-octo-sansa/contact/show"))
         {
-            ContactShowServlet contactShowServlet = new ContactShowServlet();
-            contactShowServlet.say();
+            TestCase testCase = new TestCase();
+            testCase.runAllMethods(ContactShowServlet.class);
         }
         else if(req.getRequestURI().equals("/mustached-octo-sansa/depart/list"))
         {
-            DepartListServlet departListServlet = new DepartListServlet();
-            departListServlet.say();
+            TestCase testCase = new TestCase();
+            testCase.runAllMethods(DepartListServlet.class);
         }
         else if(req.getRequestURI().equals("/mustached-octo-sansa/depart/show"))
         {
-            DepartShowServlet departShowServlet = new DepartShowServlet();
-            departShowServlet.say();
+            TestCase testCase = new TestCase();
+            testCase.runAllMethods(DepartShowServlet.class);
         }
         else
         {
