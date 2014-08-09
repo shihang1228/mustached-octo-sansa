@@ -1,14 +1,15 @@
 package com.baldurtech;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 public class ContactListServlet extends TestCase
 {    
-    public void say1()
+    public void say_list(HttpServletRequest req) throws IOException
     {
-        System.out.println("ContactListServlet");
-    }
-    
-    public void say2()
-    {
-        System.out.println("ContactListServlet2");
+        String name = req.getParameter("name");
+        String mobile = req.getParameter("mobile");
+        System.out.println("name: " + name);
+        System.out.println("mobile: " + mobile);       
     }
 }
