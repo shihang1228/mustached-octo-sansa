@@ -10,16 +10,9 @@ public class DispatcherServlet extends HttpServlet
 {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException,ServletException
     {
-        String className = convertUriToClassName(req.getRequestURI());
-        TestCase testCase = new TestCase();
-        try
-        {   
-            testCase.runAllMethods(Class.forName("com.baldurtech." + className));       
-        }
-        catch(Exception ex)
-        {
-            ex.printStackTrace();            
-        }
+        String classPackage = "com.baldurtech.";
+        String className = convertUriToClassName(req.getRequestURI());                
+        runAllMethods(classPackage,className);
     }
     
     public String convertUriToClassName(String uri)
@@ -29,5 +22,18 @@ public class DispatcherServlet extends HttpServlet
                          + arrayUri[3].substring(0,1).toUpperCase() + arrayUri[3].substring(1) 
                          + "Servlet";
         return className;
+    }
+    
+    public void runAllMethods(String classPackage, String className)
+    {
+        try
+        {   
+            TestCase testCase = new TestCase();
+            testCase.runAllMethods(Class.forName("com.baldurtech." + className));       
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();            
+        }
     }
 }
