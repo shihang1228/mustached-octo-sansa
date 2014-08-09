@@ -1,6 +1,6 @@
 package com.baldurtech;
 
-public class DepartListServlet
+public class DepartListServlet extends TestCase
 {    
     public void say()
     {

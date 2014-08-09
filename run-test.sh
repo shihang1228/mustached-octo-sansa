@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CLASSPATH="lib-test/reflections-0.9.9-RC2.jar;target/classes;target/test-classes"
+CLASSPATH="lib-test/reflections-0.9.9-RC2.jar;target/classes;"
 CLASSPATH="$CLASSPATH;lib-test/guava-15.0.jar"
 CLASSPATH="$CLASSPATH;lib-test/javassist-3.18.2-GA.jar"
 

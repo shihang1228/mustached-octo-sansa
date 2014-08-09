@@ -1,6 +1,6 @@
 package com.baldurtech;
 
-public class DepartShowServlet
+public class DepartShowServlet extends TestCase
 {    
     public void say()
     {

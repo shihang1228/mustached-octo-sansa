@@ -1,9 +1,14 @@
 package com.baldurtech;
 
-public class ContactListServlet
+public class ContactListServlet extends TestCase
 {    
-    public void say()
+    public void say1()
     {
         System.out.println("ContactListServlet");
+    }
+    
+    public void say2()
+    {
+        System.out.println("ContactListServlet2");
     }
 }
