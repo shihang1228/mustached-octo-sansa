@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.lang.reflect.Method;
 import java.util.Set;
+import javax.servlet.http.HttpServletRequest;
 import org.reflections.Reflections;
 
 public class TestCase
@@ -21,7 +22,7 @@ public class TestCase
 		}
 		return classMethods;
 	}
-	public static void runAllMethods(Class clazz)
+	public static void runAllMethods(Class clazz,HttpServletRequest req)
 	{
         System.out.println("ClassName: " + clazz.getName());
 		for(Method method: getAllClassMethods(clazz))
@@ -30,7 +31,7 @@ public class TestCase
 			try
 			{
 				Object obj = clazz.newInstance();
-				method.invoke(obj,new Object[]{});
+				method.invoke(obj,new Object[]{req});
 			}
 			catch(Exception e)
 			{
